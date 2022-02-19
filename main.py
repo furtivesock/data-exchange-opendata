@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import country_converter as coco
 import numpy as np
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
@@ -19,8 +18,8 @@ country_df = country_df.sort_values(by=['Year', 'Month'])
 country_df['Contamination growth rate'] = country_df['CovidCases'].pct_change()
 
 fig = make_subplots(specs=[[{"secondary_y": True}]])
-fig.add_trace(go.Scatter(x=country_df['Period'], y=country_df['Unemployment rate total'] * 10, name="Unemployment rate total"), secondary_y=False)
-fig.add_trace(go.Scatter(x=country_df['Period'], y=country_df['Recent graduates employment rate total (20-34yo)'] * 1.5, name="Recent graduates employment rate total (20-34yo)"), secondary_y=False)
+fig.add_trace(go.Scatter(x=country_df['Period'], y=country_df['Unemployment rate total'] * 10, name="Unemployment rate total (multiplied by 10)"), secondary_y=False)
+fig.add_trace(go.Scatter(x=country_df['Period'], y=country_df['Recent graduates employment rate total (20-34yo)'] * 1.5, name="Recent graduates employment rate total (20-34yo) (multiplied by 1.5)"), secondary_y=False)
 fig.add_trace(go.Scatter(x=country_df['Period'], y=country_df['Death-on-infection ratio'], name="Death-on-infection ratio"), secondary_y=True)
 fig.update_xaxes(title_text="Period")
 fig.update_yaxes(title_text="Death-on-infection ratio", secondary_y=True)
