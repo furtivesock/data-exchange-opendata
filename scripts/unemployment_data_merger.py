@@ -15,8 +15,8 @@
 import os
 import csv
 
-OECD_DIR_PATH = "data.oecd"
-EUROSTAT_DIR_PATH = "eurostat/data"
+OECD_DIR_PATH = "../data/unemployment/data.oecd"
+EUROSTAT_DIR_PATH = "../data/unemployment/data.eurostat/data"
 
 # Columns that will be added in the results based on the two files :
 existing_data_names = ["Unemp_total"]
@@ -186,7 +186,7 @@ for data in total_data:
     country[data["data_name"]] = data["data_value"]
 
 # Write to csv
-with open("data.csv", "w", encoding="utf-8") as csv_file:
+with open("../data/unemployment/intermediate_generated_data.csv", "w", encoding="utf-8") as csv_file:
     csv_writer = csv.writer(csv_file, delimiter=",")
     csv_writer.writerow(["Year", "Mounth", "Country"] + existing_data_names)
 
@@ -201,3 +201,4 @@ with open("data.csv", "w", encoding="utf-8") as csv_file:
                         data.append("")
 
                 csv_writer.writerow([year, mounth, country] + data)
+print("Done")
