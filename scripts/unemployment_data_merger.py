@@ -2,11 +2,11 @@
 #
 # Script used to make the unemployment intermediate data
 #
-# This script takes two CSV file format and merges them into one that follows
+# This script takes two CSV files and merges them into one that follows
 # the intermediary format on the theme of unemployment.
 #
-# The first file format is from the oced,
-# The second file format is from eurostat,
+# The first file format is from the OCED
+# The second file format is from Eurostat
 #
 # Author: Tom Mansion
 #
