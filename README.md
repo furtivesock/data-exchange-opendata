@@ -6,7 +6,7 @@ Source code for the first assignment in Data exchange and representation course 
 
 The goal of this project was to merge three different OpenData datasets into one. We chose to find a relationship between Recent graduates employment, Unemployment and COVID-19 outbreak.
 
-You can view the correlation graph by country here :
+You can view the correlation graph by country [here](https://share.streamlit.io/furtivesock/data-exchange-opendata/main/main.py).
 
 Data are missing for some countries due to the initial datasets, but you can find complete graphs for European countries especially.
 
